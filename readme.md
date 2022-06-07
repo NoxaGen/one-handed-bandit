@@ -1,0 +1,3 @@
+simple project for train some OOP in javascript
+
+full description will come soon...
