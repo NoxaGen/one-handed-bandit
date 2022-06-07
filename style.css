@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+}
+
+.machine {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 500px;
+    background-color: rgba(220, 24, 24, 0.915);
+    border-radius: 10%;
+}
