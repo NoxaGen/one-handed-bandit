@@ -18,6 +18,10 @@ body {
     height: 500px;
     background-color: rgba(220, 24, 24, 0.915);
     border-radius: 10%;
+    border-style: dotted;
+    border-color: yellow;
+    border-width: 20px;
+    border-spacing: 50px;
 }
 
 .machine .cover {
@@ -28,6 +32,10 @@ body {
     height: 85%;
     width: 90%;
     z-index: 1;
-    background-color: white;
+    background-color: rgba(227, 222, 218, 0.906);
     border-radius: 5%;
-}
+    border-style: dotted;
+    border-color: yellow;
+    border-width: 20px;
+    /* box-shadow: 1px 1px 10px 10px yellow;
+} */
