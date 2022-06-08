@@ -40,7 +40,7 @@ h1 {
     height: 90%;
     width: 95%;
     z-index: 1;
-    background-color: rgba(227, 222, 218, 0.906);
+    background-color: rgba(0, 0, 0, 0.906);
     border-style: dotted;
     border-color: rgb(243, 247, 6);
 
@@ -55,14 +55,44 @@ h1 {
 
 .machine .cover .inside-cover {
     position: absolute;
+    display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 90%;
     width: 95%;
     z-index: 2;
-    background-color: rgba(231, 219, 219, 0.978);
-    border-radius: 3%;
+    background-color: rgba(0, 0, 0, 0.906);
+    /* border-radius: 3%; */
+    overflow: hidden;
+    justify-content: space-between;
+    border: black 4px solid;
+}
+
+.screen-1,
+.screen-2,
+.screen-3 {
+    width: 33%;
+    height: 100%;
+    background-color: rgb(246, 233, 213);
+    /* border: 5px solid rgb(40, 39, 39); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.screen-1 {
+    background-image: url(./images/banana_transparent.png);
+}
+
+.screen-2 {
+    background-image: url(./images/cherries_transparent.png);
+    background-size: 95%;
+}
+
+.screen-3 {
+    background-image: url(./images/plum_transparent.png);
+    background-size: 85%;
 }
 
 /* box-shadow: 1px 1px 10px 10px yellow;
