@@ -17,11 +17,8 @@ body {
     width: 1000px;
     height: 500px;
     background-color: rgba(220, 24, 24, 0.915);
-    border-radius: 10%;
-    border-style: dotted;
-    border-color: yellow;
-    border-width: 20px;
-    border-spacing: 50px;
+    border-radius: 3%;
+
 }
 
 .machine .cover {
@@ -29,13 +26,29 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 85%;
-    width: 90%;
+    height: 90%;
+    width: 95%;
     z-index: 1;
     background-color: rgba(227, 222, 218, 0.906);
-    border-radius: 5%;
     border-style: dotted;
     border-color: yellow;
+    border-radius: 0%;
+
     border-width: 20px;
-    /* box-shadow: 1px 1px 10px 10px yellow;
+    border-spacing: 50px;
+    background-color: rgba(220, 24, 24, 0.915);
+}
+
+.machine .cover .inside-cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 95%;
+    width: 95%;
+    z-index: 2;
+    background-color: pink;
+}
+
+/* box-shadow: 1px 1px 10px 10px yellow;
 } */
