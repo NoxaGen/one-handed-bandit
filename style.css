@@ -20,8 +20,8 @@ h1 {
 }
 
 .machine {
-    position: absolute;
-    top: 10%;
+    position: relative;
+    top: 5%;
     left: 50%;
     transform: translateX(-50%);
     width: 1000px;
@@ -94,6 +94,17 @@ h1 {
     background-image: url(./images/plum_transparent.png);
     background-size: 85%;
 }
+
+.panel {
+    position: relative;
+    background-color: green;
+    text-align: center;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+}
+
 
 /* box-shadow: 1px 1px 10px 10px yellow;
 } */
