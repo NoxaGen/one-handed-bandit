@@ -19,6 +19,7 @@ h1 {
     font-size: 35px;
 }
 
+
 .machine {
     position: relative;
     top: 3%;
@@ -29,7 +30,7 @@ h1 {
     background-color: rgb(220, 24, 24);
     border-radius: 3%;
     box-shadow: 0px 0px 20px 3px rgb(243, 247, 6);
-
+    animation: glowMachine ease infinite 5s;
 }
 
 .machine .cover {
@@ -198,6 +199,24 @@ footer p a {
 
 @keyframes glowMachine {
 
-    0% {}
+    0% {
+        box-shadow: 0px 0px 20px 10px rgb(243, 247, 6);
+    }
+
+    25% {
+        box-shadow: 0px 0px 20px 10px rgb(244, 4, 52);
+    }
+
+    50% {
+        box-shadow: 0px 0px 20px 10px rgb(243, 247, 6);
+    }
+
+    75% {
+        box-shadow: 0px 0px 20px 10px rgb(244, 4, 52);
+    }
+
+    100% {
+        box-shadow: 0px 0px 20px 10px rgb(243, 247, 6);
+    }
 
 }
