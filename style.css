@@ -166,3 +166,13 @@ input {
     color: rgb(243, 247, 6);
     text-shadow: 2px 2px 30px rgb(243, 247, 6);
 }
+
+footer {
+    position: fixed;
+    bottom: 0%;
+    height: 80px;
+    width: 100%;
+    background-color: pink;
+    line-height: 30px;
+    text-align: center;
+}
