@@ -169,10 +169,35 @@ input {
 
 footer {
     position: fixed;
+    display: flex;
+    justify-content: space-between;
     bottom: 0%;
-    height: 80px;
-    width: 100%;
-    background-color: pink;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30px;
+    width: 800px;
+
     line-height: 30px;
-    text-align: center;
+
+}
+
+footer h2 a {
+    color: rgb(211, 34, 227);
+    text-shadow: 2px 5px 30px rgb(211, 34, 227);
+    font-family: 'Righteous', 'Arial';
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+footer p a {
+    color: rgb(35, 206, 218);
+    text-shadow: 2px 5px 30px rgb(35, 206, 218);
+    font-size: 23px;
+}
+
+@keyframes glowMachine {
+
+    0% {}
+
 }
