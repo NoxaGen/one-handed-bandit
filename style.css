@@ -151,7 +151,18 @@ input {
     left: 50%;
     transform: translateX(-50%);
     color: rgb(6, 214, 6);
-    text-shadow: 2px 5px 10px rgb(6, 214, 6);
+    text-shadow: 2px 5px 30px rgb(6, 214, 6);
     height: 150px;
     width: 450px;
+}
+
+.summary p:nth-child(2),
+.summary p:nth-child(5) {
+    color: rgb(251, 17, 17);
+    text-shadow: 2px 5px 30px rgb(251, 17, 17);
+}
+
+.summary p:nth-child(3) {
+    color: rgb(243, 247, 6);
+    text-shadow: 2px 2px 30px rgb(243, 247, 6);
 }
