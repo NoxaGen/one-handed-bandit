@@ -20,6 +20,26 @@ class Wallet {
             }
         }
 
+        //one method for both operation like add/substract cash from/to wallet
+        //it's need two parameters 1: value  2: type (+/-)
+
+        this.changeWalletValue = (value, type) => {
+            //this if statment checks that passed value is number AND also is build in JS method
+            //wich is called isNan, because NaN(not a number) is threated like number normaly?
+            if (typeof value === "number" && !isNaN(value)) {
+                if (type === '+') {
+                    return _money += value;
+                } else if (type === '-') {
+                    return _money -= value;
+                } else {
+                    //something new, instance in Error module?
+                    throw new Error('Możesz dodawać lub odejmować stan portfela!')
+                }
+            } else {
+                throw new Error('Nieprawidłowy typ działania.')
+            }
+
+        }
     };
 
 
