@@ -12,6 +12,14 @@ class Wallet {
             _money = value;
             return _money
         }
+        //this method will checks are user is able to play wich his saldo
+        this.checkUserCanPlay = (value) => {
+            if (_money >= value) return true
+            else {
+                return false
+            }
+        }
+
     };
 
 
