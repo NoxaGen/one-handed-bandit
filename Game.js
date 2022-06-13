@@ -16,11 +16,25 @@ class Game {
     }
 
     //method for refreshing all information 
-    render(money = this.wallet.getWalletValue(), stats = [0, 0, 0]) {
+    //te właściwości domyślne są przekazane tylko po to, żeby przy wczytaniu
+    //metody render, mieć jakieś początkowe parametry ONE WSZYSTKIE
+    //zostaną nadpisane :)
+
+    render(render = ['url(./images/dolar_start_sign.png)', 'url(./images/dolar_start_sign.png)', 'url(./images/dolar_start_sign.png)'],
+        money = this.wallet.getWalletValue(), stats = [0, 0, 0], lostMoney = 0, result = "", bid = 0, wonMoney = 0) {
         this.walletSaldo.textContent = money;
+        if (result) {
+            result = `Wygrałeś ${wonMoney}`;
+        } else if (!result && result !== "") {
+            result = `Przegrałeś ${bid}`
+        }
+        this.lostCash.textContent = lostMoney;
         this.numberOfSpins.textContent = stats[0];
         this.numberOfWins.textContent = stats[1];
         this.numberOfLoses.textContent = stats[2];
+        this.fruitsInMachine.forEach((fruit, index) =>
+            fruit.style.backgroundImage = render[index]
+        )
 
     }
 
