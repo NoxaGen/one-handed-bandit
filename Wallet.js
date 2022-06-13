@@ -1,33 +1,34 @@
 class Wallet {
- constructor(money) {
-  let _money = money;
-  //pobieranie aktualnej zawartości portfela
-  this.getWalletValue = () => _money;
+    constructor(money) {
+        //private variable to store information
+        let _money = money;
+        //method below allow to download wallet value
+        this.getWalletValue = () => _money;
 
-  //Sprawdzanie czy użytkonik ma odpowiednią ilość środków
 
-  this.checkCanPlay = value => {
-   if (_money >= value) return true;
-   return false;
-  }
+        //this method will check that user have enough coins for bid he want to put
+        this.checkCanPlay = value => {
+            if (_money >= value) return true;
+            return false;
+        }
 
-  this.changeWallet = (value, type = "+") => {
-   if (typeof value === "number" && !isNaN(value)) {
-    if (type === "+") {
-     return _money += value;
-    } else if (type === "-") {
-     return _money -= value;
-    } else {
-     throw new Error("nieprawidłowy typ działania")
+        this.changeWallet = (value, type = "+") => {
+            if (typeof value === "number" && !isNaN(value)) {
+                if (type === "+") {
+                    return _money += value;
+                } else if (type === "-") {
+                    return _money -= value;
+                } else {
+                    throw new Error("Nieprawidłowy operator działania.")
+                }
+
+            } else {
+                console.log(typeof value);
+                throw new Error("Nieprawidłowa liczba.")
+            }
+        }
+
     }
-
-   } else {
-    console.log(typeof value);
-    throw new Error("nieprawdidłowa liczba")
-   }
-  }
-
- }
 
 }
 
