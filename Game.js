@@ -58,7 +58,19 @@ class Game {
         const fruits = game.draw.getDrawResult()
         //tests below
         console.log(fruits)
+        //fruit upgrade 
+        //plum
         if (fruits[0] === 'plum') this.render[0] = this.fruitsInMachine[0].style.backgroundImage = 'url(./images/plum_transparent.png)'
+        else if (fruits[1] === 'plum') this.render[1] = this.fruitsInMachine[1].style.backgroundImage = 'url(./images/plum_transparent.png)'
+        else if (fruits[2] === 'plum') this.render[2] = this.fruitsInMachine[2].style.backgroundImage = 'url(./images/plum_transparent.png)'
+        //banana
+        if (fruits[0] === 'banana') this.render[0] = this.fruitsInMachine[0].style.backgroundImage = 'url(./images/banana_transparent.png)'
+        else if (fruits[1] === 'banana') this.render[1] = this.fruitsInMachine[1].style.backgroundImage = 'url(./images/banana_transparent.png)'
+        else if (fruits[2] === 'banana') this.render[2] = this.fruitsInMachine[2].style.backgroundImage = 'url(./images/banana_transparent.png)'
+        //cherries
+        if (fruits[0] === 'cherry') this.render[0] = this.fruitsInMachine[0].style.backgroundImage = 'url(./images/cherries_transparent.png)'
+        else if (fruits[1] === 'cherry') this.render[1] = this.fruitsInMachine[1].style.backgroundImage = 'url(./images/cherries_transparent.png)'
+        else if (fruits[2] === 'cherry') this.render[2] = this.fruitsInMachine[2].style.backgroundImage = 'url(./images/cherries_transparent.png)'
 
         //we assigne STATIS Method from Result class (we dont need to create instance of obj) to var win
         const win = Result.checkWinner(fruits);
@@ -72,6 +84,10 @@ class Game {
         console.log(wonMoney)
         console.log(this.wallet.getWalletValue())
 
+        this.stats.addGameToStatistics(win, bid);
+        console.log
+
+        this.render([fruits], this.wallet.getWalletValue(), this.stats.showGameStatistics(), win, bid);
     }
 
 }
