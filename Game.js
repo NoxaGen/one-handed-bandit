@@ -52,12 +52,17 @@ class Game {
         //call of the method that allows us 
         this.wallet.changeWalletValue(bid, '-');
 
+        //we open instance for the Draw class
         this.draw = new Draw();
+        //now we assign one of the Draw method to the var
+        const fruits = game.draw.getDrawResult()
+        //tests below
+        console.log(fruits)
+        if (fruits[0] === 'plum') this.render[0] = this.fruitsInMachine[0].style.backgroundImage = 'url(./images/plum_transparent.png)'
 
-        const result = game.draw.getDrawResult()
-        console.log(result)
-        if (result[0] === 'plum') this.render[0] = this.fruitsInMachine[0].style.backgroundImage = 'url(./images/plum_transparent.png)'
-
+        //we assigne STATIS Method from Result class (we dont need to create instance of obj) to var win
+        const win = Result.checkWinner(fruits);
+        console.log(win)
     }
 
 }
