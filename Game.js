@@ -52,6 +52,11 @@ class Game {
         //call of the method that allows us 
         this.wallet.changeWalletValue(bid, '-');
 
+        this.draw = new Draw();
+
+        const result = game.draw.getDrawResult()
+        console.log(result)
+        if (result[0] === 'plum') this.render[0] = this.fruitsInMachine[0].style.backgroundImage = 'url(./images/plum_transparent.png)'
 
     }
 
