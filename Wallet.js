@@ -12,7 +12,7 @@ class Wallet {
             return false;
         }
 
-        this.changeWallet = (value, type = "+") => {
+        this.changeWalletValue = (value, type = "+") => {
             if (typeof value === "number" && !isNaN(value)) {
                 if (type === "+") {
                     return _money += value;
