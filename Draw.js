@@ -14,7 +14,7 @@ class Draw {
             // console.log(fruit);
             fruits.push(fruit)
         }
-        return colors
+        return fruits
     }
 }
 
