@@ -63,6 +63,15 @@ class Game {
         //we assigne STATIS Method from Result class (we dont need to create instance of obj) to var win
         const win = Result.checkWinner(fruits);
         console.log(win)
+
+        //we call another Result static method wich need 2 args, so we put win(its return true/false) and bid from eaerlier var
+        const wonMoney = Result.moneyWinInGame(win, bid);
+        if (wonMoney) {
+            this.wallet.changeWalletValue(wonMoney, '+')
+        }
+        console.log(wonMoney)
+        console.log(this.wallet.getWalletValue())
+
     }
 
 }
