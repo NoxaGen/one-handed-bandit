@@ -7,7 +7,6 @@
 body {
     height: 100vh;
     background-color: rgb(0, 0, 0);
-
 }
 
 h1 {
@@ -18,7 +17,6 @@ h1 {
     padding-top: 25px;
     font-size: 35px;
 }
-
 
 .machine {
     position: relative;
@@ -44,16 +42,10 @@ h1 {
     background-color: rgba(0, 0, 0, 0.906);
     border-style: dotted;
     border-color: rgb(243, 247, 6);
-
-    border-radius: 0%;
-    /* box-shadow: 0px 0px 20px 3px rgb(243, 247, 6); */
     border-width: 25px;
     border-spacing: 50px;
     background-color: rgb(220, 24, 24);
-
 }
-
-
 
 .machine .cover .inside-cover {
     position: absolute;
@@ -65,11 +57,9 @@ h1 {
     width: 95%;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.906);
-    /* border-radius: 3%; */
     overflow: hidden;
     justify-content: space-between;
     border: black 4px solid;
-
 }
 
 .screen-1,
@@ -78,10 +68,10 @@ h1 {
     width: 33%;
     height: 100%;
     background-color: rgb(246, 233, 213);
-    /* border: 5px solid rgb(40, 39, 39); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 0.5s;
 }
 
 .screen-1 {
@@ -90,27 +80,25 @@ h1 {
 
 .screen-2 {
     background-image: url(./images/cherries_transparent.png);
-    background-size: 95%;
 }
 
 .screen-3 {
     background-image: url(./images/plum_transparent.png);
-    background-size: 85%;
 }
 
 .panel {
     position: relative;
-
     text-align: center;
     top: 7%;
     left: 50%;
     transform: translateX(-50%);
-    /* width: 1000px; */
-
-
 }
 
 .panel ::placeholder {
+    text-align: center;
+}
+
+.panel input {
     text-align: center;
 }
 
@@ -131,7 +119,6 @@ h1 {
     color: rgb(6, 214, 6);
     box-shadow: 0px 0px 20px 10px rgb(6, 214, 6);
     text-shadow: 2px 5px 10px rgb(6, 214, 6);
-
 }
 
 input {
@@ -177,9 +164,7 @@ footer {
     transform: translateX(-50%);
     height: 30px;
     width: 800px;
-
     line-height: 30px;
-
 }
 
 footer h2 a {
@@ -188,7 +173,6 @@ footer h2 a {
     font-family: 'Righteous', 'Arial';
     font-size: 20px;
     text-decoration: none;
-
 }
 
 footer p a {
@@ -218,5 +202,4 @@ footer p a {
     100% {
         box-shadow: 0px 0px 20px 10px rgb(243, 247, 6);
     }
-
 }
