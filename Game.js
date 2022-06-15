@@ -1,33 +1,42 @@
 class Game {
     constructor() {
+        //open two instances 
         this.stats = new Statistics();
         this.wallet = new Wallet(200);
-        //addEventListener zrywa połączenie this'a, dlatego trzeba je 'związać' bindem
-        //w ten sposób jest jakby utworzona nowa metoda która przechowuje poprawną referencje do thisa
+
+        //i need to bind (this) cause aEL - breaking bound of this
         document.getElementById('spin').addEventListener('click', this.startGame.bind(this));
         this.inputBid = document.getElementById('bid');
         //spans 
         this.walletSaldo = document.querySelector('[data-summary="user-cash"]'); //money
-        this.lostCash = document.querySelector('[data-summary="lost-cash"]');
+        this.lastGame = document.querySelector('[data-summary="last-game"]'); //history of last game
         this.numberOfSpins = document.querySelector('[data-summary="spins"]'); //0 stats
         this.numberOfWins = document.querySelector('[data-summary="wins"]'); //1 stats
         this.numberOfLoses = document.querySelector('[data-summary="losses"]'); //2 stats
-        //fruit divs
+        //fruit divs converted into arr
         this.fruitsInMachine = [...document.querySelectorAll('[data-option="fruit"]')];
         //render method from below
         this.render()
     }
 
-    //all this params are startup params - they will be raplaced by another method
+    //all this params are startup params - startGame method will upgrade them
     render(render = ['url(./images/dolar_start_sign.png)', 'url(./images/dolar_start_sign.png)', 'url(./images/dolar_start_sign.png)'],
-        money = this.wallet.getWalletValue(), stats = [0, 0, 0], lostMoney = 0, result = "", bid = 0, wonMoney = 0) {
+        money = this.wallet.getWalletValue(), stats = [0, 0, 0], lastGame = "0", result = "", bid = 0) {
         this.walletSaldo.textContent = money;
+
         if (result) {
-            result = `Wygrałeś ${wonMoney}`;
+            document.querySelector('.summary p:nth-child(2)').style.color = "rgb(6, 214, 6)";
+            document.querySelector('.summary p:nth-child(2)').style.textShadow = "2px 5px 30px rgb(6, 214, 6);";
+            lastGame = `Wygrałeś: ${bid * 3}! Saldo + ${bid*3 - bid}`;
         } else if (!result && result !== "") {
-            result = `Przegrałeś ${bid}`
+            document.querySelector('.summary p:nth-child(2)').style.color = "rgb(251, 17, 17)";
+            document.querySelector('.summary p:nth-child(2)').style.textShadow = "2px 5px 30px rgb(251, 17, 17);";
+            lastGame = `Przegrałeś: -${bid}`
         }
-        this.lostCash.textContent = lostMoney;
+
+
+
+        this.lastGame.textContent = lastGame;
         this.numberOfSpins.textContent = stats[0];
         this.numberOfWins.textContent = stats[1];
         this.numberOfLoses.textContent = stats[2];
@@ -52,25 +61,27 @@ class Game {
         //call of the method that allows us 
         this.wallet.changeWalletValue(bid, '-');
 
+
+
         //we open instance for the Draw class
         this.draw = new Draw();
         //now we assign one of the Draw method to the var
         const fruits = game.draw.getDrawResult()
         //tests below
-        console.log(fruits)
+        // console.log(fruits)
         //fruit upgrade 
         //plum
         if (fruits[0] === 'plum') this.render[0] = this.fruitsInMachine[0].style.backgroundImage = 'url(./images/plum_transparent.png)'
-        else if (fruits[1] === 'plum') this.render[1] = this.fruitsInMachine[1].style.backgroundImage = 'url(./images/plum_transparent.png)'
-        else if (fruits[2] === 'plum') this.render[2] = this.fruitsInMachine[2].style.backgroundImage = 'url(./images/plum_transparent.png)'
+        if (fruits[1] === 'plum') this.render[1] = this.fruitsInMachine[1].style.backgroundImage = 'url(./images/plum_transparent.png)'
+        if (fruits[2] === 'plum') this.render[2] = this.fruitsInMachine[2].style.backgroundImage = 'url(./images/plum_transparent.png)'
         //banana
         if (fruits[0] === 'banana') this.render[0] = this.fruitsInMachine[0].style.backgroundImage = 'url(./images/banana_transparent.png)'
-        else if (fruits[1] === 'banana') this.render[1] = this.fruitsInMachine[1].style.backgroundImage = 'url(./images/banana_transparent.png)'
-        else if (fruits[2] === 'banana') this.render[2] = this.fruitsInMachine[2].style.backgroundImage = 'url(./images/banana_transparent.png)'
+        if (fruits[1] === 'banana') this.render[1] = this.fruitsInMachine[1].style.backgroundImage = 'url(./images/banana_transparent.png)'
+        if (fruits[2] === 'banana') this.render[2] = this.fruitsInMachine[2].style.backgroundImage = 'url(./images/banana_transparent.png)'
         //cherries
         if (fruits[0] === 'cherry') this.render[0] = this.fruitsInMachine[0].style.backgroundImage = 'url(./images/cherries_transparent.png)'
-        else if (fruits[1] === 'cherry') this.render[1] = this.fruitsInMachine[1].style.backgroundImage = 'url(./images/cherries_transparent.png)'
-        else if (fruits[2] === 'cherry') this.render[2] = this.fruitsInMachine[2].style.backgroundImage = 'url(./images/cherries_transparent.png)'
+        if (fruits[1] === 'cherry') this.render[1] = this.fruitsInMachine[1].style.backgroundImage = 'url(./images/cherries_transparent.png)'
+        if (fruits[2] === 'cherry') this.render[2] = this.fruitsInMachine[2].style.backgroundImage = 'url(./images/cherries_transparent.png)'
 
         //we assigne STATIS Method from Result class (we dont need to create instance of obj) to var win
         const win = Result.checkWinner(fruits);
@@ -81,13 +92,17 @@ class Game {
         if (wonMoney) {
             this.wallet.changeWalletValue(wonMoney, '+')
         }
-        console.log(wonMoney)
+
+
+        console.log(`wonMoney: ${wonMoney}`)
         console.log(this.wallet.getWalletValue())
 
         this.stats.addGameToStatistics(win, bid);
         console.log
 
-        this.render([fruits], this.wallet.getWalletValue(), this.stats.showGameStatistics(), win, bid);
+
+
+        this.render([fruits], this.wallet.getWalletValue(), this.stats.showGameStatistics(), this.wonMoney, win, bid);
     }
 
 }
