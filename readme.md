@@ -18,9 +18,9 @@ I never work with classes, constructors and closures, so i was struggle a little
 2. User have 200$ credits on start, and can manage the bid value, if he win's the bid will be multiply by 3, if he lose, he will gain nothing. The colorfull spans will change dynamicly after every spin.
 3. There is a lot if-statments wich responsible for proper input, also methods wich checking some game-rules init, like:
 
-a) User can't spin less then 1$, if user put 1.4$, the input will be floored to the 1 and viceversa.
-b) Input type allow input only numbers.
-c) Methods checks Wallet of the user are enough credits for another spin.
+3.1 User can't spin less then 1$, if user put 1.4$, the input will be floored to the 1 and viceversa.
+3.2 Input type allow input only numbers.
+3.3 Methods checks Wallet of the user are enough credits for another spin.
 
 4. Everyspin will randomize fruit in each div, so there is 3 independent draws, the game is 100% fair.
 
