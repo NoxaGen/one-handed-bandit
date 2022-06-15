@@ -4,7 +4,7 @@ class Game {
         this.stats = new Statistics();
         this.wallet = new Wallet(200);
 
-        //i need to bind (this) cause aEL - breaking bound of this
+        //i need to bind (this) cause event listener - breaking bound of it
         document.getElementById('spin').addEventListener('click', this.startGame.bind(this));
         this.inputBid = document.getElementById('bid');
         //spans 
@@ -21,8 +21,7 @@ class Game {
 
     //all this params are startup params - startGame method will upgrade them
     render(render = ['url(./images/dolar_start_sign.png)', 'url(./images/dolar_start_sign.png)', 'url(./images/dolar_start_sign.png)'],
-        money = this.wallet.getWalletValue(), stats = [0, 0, 0], lastGame = "0", result = "", bid = 0) {
-        this.walletSaldo.textContent = money;
+        money = this.wallet.getWalletValue(), stats = [0, 0, 0], lastGame = "", result = "", bid = 0) {
 
         if (result) {
             document.querySelector('.summary p:nth-child(2)').style.color = "rgb(6, 214, 6)";
@@ -34,8 +33,7 @@ class Game {
             lastGame = `Przegrałeś: -${bid}`
         }
 
-
-
+        this.walletSaldo.textContent = money;
         this.lastGame.textContent = lastGame;
         this.numberOfSpins.textContent = stats[0];
         this.numberOfWins.textContent = stats[1];
@@ -43,33 +41,25 @@ class Game {
         this.fruitsInMachine.forEach((fruit, index) =>
             fruit.style.backgroundImage = render[index]
         )
-
     }
 
-    //why this doesn't work but when i called instance game its working?
-    //wiązanie zrywa tez addEventListener podobnie jak foreach?
-    // rozwiązanie to nie game, tylko użycie ZWIĄZANIA - BIND'a
     startGame() {
-        //this statment checks is value is minimum 1, mathfloor also convert string into number in hidden process
+
         if (this.inputBid.value < 1) return alert('Minimalna wartość aby zagrać nie może być mniejsza niż 1$')
-        //this var store passed bid in the inpute so we can use it in this method 
+        //input value stored in var 
         const bid = Math.floor(this.inputBid.value);
 
-        //this statment calling method from Wallet class that check user have enough coins to play
         if (!this.wallet.checkCanPlay(bid)) return alert("Masz za mało środków aby zagrać!")
 
-        //call of the method that allows us 
+        //method from Wallet class, substract cash after user spin
         this.wallet.changeWalletValue(bid, '-');
-
-
-
         //we open instance for the Draw class
         this.draw = new Draw();
         //now we assign one of the Draw method to the var
         const fruits = game.draw.getDrawResult()
-        //tests below
-        // console.log(fruits)
-        //fruit upgrade 
+
+        //maybe its look like noob-code, but it's working fine and rendering proper fruits
+
         //plum
         if (fruits[0] === 'plum') this.render[0] = this.fruitsInMachine[0].style.backgroundImage = 'url(./images/plum_transparent.png)'
         if (fruits[1] === 'plum') this.render[1] = this.fruitsInMachine[1].style.backgroundImage = 'url(./images/plum_transparent.png)'
@@ -83,26 +73,20 @@ class Game {
         if (fruits[1] === 'cherry') this.render[1] = this.fruitsInMachine[1].style.backgroundImage = 'url(./images/cherries_transparent.png)'
         if (fruits[2] === 'cherry') this.render[2] = this.fruitsInMachine[2].style.backgroundImage = 'url(./images/cherries_transparent.png)'
 
-        //we assigne STATIS Method from Result class (we dont need to create instance of obj) to var win
-        const win = Result.checkWinner(fruits);
-        console.log(win)
+        //we get result from static method 
+        const result = Result.checkWinner(fruits);
 
-        //we call another Result static method wich need 2 args, so we put win(its return true/false) and bid from eaerlier var
-        const wonMoney = Result.moneyWinInGame(win, bid);
+        //another static method from Result class
+        const wonMoney = Result.moneyWinInGame(result, bid);
+
         if (wonMoney) {
             this.wallet.changeWalletValue(wonMoney, '+')
         }
 
+        this.stats.addGameToStatistics(result, bid);
 
-        console.log(`wonMoney: ${wonMoney}`)
-        console.log(this.wallet.getWalletValue())
-
-        this.stats.addGameToStatistics(win, bid);
-        console.log
-
-
-
-        this.render([fruits], this.wallet.getWalletValue(), this.stats.showGameStatistics(), this.wonMoney, win, bid);
+        //finaly when we get all information we overwrite it below
+        this.render([fruits], this.wallet.getWalletValue(), this.stats.showGameStatistics(), this.wonMoney, result, bid);
     }
 
 }
