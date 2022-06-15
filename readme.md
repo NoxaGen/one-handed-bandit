@@ -3,10 +3,10 @@ Project: One-handed bandit game.
 You can try it here: https://noxagen.github.io/one-handed-bandit/
 
 How it looks:
-![onehanded bandit screenshot](https://user-images.githubusercontent.com/87094041/173853722-a770da4b-13f5-457d-a1c3-564ac400ebdd.jpg)
+![onehanded bandit screenshot](https://user-images.githubusercontent.com/87094041/173856729-72224ab3-75a7-4029-80a4-71f4c0214e5a.jpg)
 
 
-Plan of the objects:
+Plan of the objects: (Polish language, sorry)
 ![project_plan](https://user-images.githubusercontent.com/87094041/173852898-fac92648-0096-4bc4-b82b-74a6f4d92996.jpg)
 
 Description:
