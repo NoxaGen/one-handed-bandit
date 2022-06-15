@@ -7,7 +7,7 @@ class Draw {
 
     drawResult() {
         let fruits = [];
-        //this array will filled with random choices pushes into it
+        //this array will be filled with random choices pushes into it
         for (let i = 0; i < this.options.length; i++) {
             const index = Math.floor(Math.random() * this.options.length)
             const fruit = this.options[index]
@@ -17,5 +17,3 @@ class Draw {
         return fruits
     }
 }
-
-// const draw = new Draw()
