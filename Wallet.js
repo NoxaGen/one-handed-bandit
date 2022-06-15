@@ -12,6 +12,7 @@ class Wallet {
             return false;
         }
 
+        //check value is ok
         this.changeWalletValue = (value, type = "+") => {
             if (typeof value === "number" && !isNaN(value)) {
                 if (type === "+") {
@@ -27,9 +28,5 @@ class Wallet {
                 throw new Error("Nieprawidłowa liczba.")
             }
         }
-
     }
-
 }
-
-// const wallet = new Wallet(200)
