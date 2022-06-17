@@ -1,0 +1,158 @@
+<mxfile host="app.diagrams.net" modified="2022-06-17T09:51:59.930Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="hsyBxD7Qux2ELn-NJ5eU" version="20.0.1" type="github">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-0" value="class Wallet{}" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="50" y="50" width="400" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-1" value="1. _money - private variable wich is stors credits." style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-0">
+          <mxGeometry y="30" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-2" value="2. this.getWalletValueMethod() wich allow us to check wallet value." style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-0">
+          <mxGeometry y="60" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-3" value="3. this.checkCanPlay() - method checks user have enough credits." style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-0">
+          <mxGeometry y="90" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-8" value="4. this.changeWalletValue - method that allow us to modify wallet value." style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-0">
+          <mxGeometry y="120" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-11" value="class Draw{}&#xa;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;sketch=0;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="50" y="220" width="400" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-12" value="1. _result - private var to stors result of draw." style="text;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-11">
+          <mxGeometry y="26" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-14" value="2. this.options - Array thats store 3 draw options." style="text;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-11">
+          <mxGeometry y="52" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-19" value="" style="endArrow=none;html=1;rounded=1;sketch=0;fontSize=12;curved=0;entryX=1.005;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="sDLXdUVLIu_r97FrDlhg-11" target="sDLXdUVLIu_r97FrDlhg-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="90" as="sourcePoint" />
+            <mxPoint x="460" y="90" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="230" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-18" value="3. drawResult() - method wich constains array and random-system, " style="text;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-11">
+          <mxGeometry y="82" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-20" value="wich pushes random options into array and returns it." style="text;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-11">
+          <mxGeometry y="112" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-24" value="class Statistics{}    " style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#dae8fc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;sketch=0;fontSize=12;strokeColor=#6c8ebf;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="50" y="380" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-25" value="1. constructor contains array wich stors results of game and wallet history." style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;fontSize=12;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-24">
+          <mxGeometry y="26" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-29" value="" style="endArrow=none;html=1;rounded=1;sketch=0;fontSize=12;curved=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="sDLXdUVLIu_r97FrDlhg-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="51" as="sourcePoint" />
+            <mxPoint x="400" y="51" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-26" value="2. addGameStatistics() creating object and sends it to the array." style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;fontSize=12;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-24">
+          <mxGeometry y="52" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-27" value="3. showGameStatistics() using arrays methods on gameResult[] " style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;fontSize=12;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-24">
+          <mxGeometry y="78" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-33" value="to count results of [games, wins, losses]." style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;fontSize=12;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-24">
+          <mxGeometry y="104" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-35" value="class Result{} " style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;sketch=0;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="50" y="530" width="400" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-36" value="1. moneyWinInGame() - static method wich returns triple bid or zero. " style="text;strokeColor=#9673a6;fillColor=#e1d5e7;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;fontSize=12;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-35">
+          <mxGeometry y="26" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-38" value="2. checkWinner() - requies to pass draw-result and returns win or lose." style="text;strokeColor=#9673a6;fillColor=#e1d5e7;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;fontSize=12;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-35">
+          <mxGeometry y="52" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-40" value="" style="curved=1;endArrow=classic;html=1;rounded=1;sketch=0;fontSize=12;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="sDLXdUVLIu_r97FrDlhg-35" target="sDLXdUVLIu_r97FrDlhg-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="70" as="sourcePoint" />
+            <mxPoint x="470" y="-390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="430" y="70" />
+              <mxPoint x="430" y="-90" />
+              <mxPoint x="420" y="-170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-41" value="class Game{}" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;sketch=0;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="50" y="650" width="720" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-42" value="1. in constructor we download all HTML elements and open instance to Statistics and Wallet classes." style="text;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;fontSize=12;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-41">
+          <mxGeometry y="26" width="720" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-44" value="2. render() this method is responsible for set all initial setup on page, then process all information we gather and upgrade setup." style="text;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;fontSize=12;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-41">
+          <mxGeometry y="52" width="720" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-45" value="3. gameStart() this method gets input value, calling every method what is requied in process from difrrent classes, " style="text;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;fontSize=12;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-41">
+          <mxGeometry y="78" width="720" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-46" value="then inject all information in render() " style="text;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;fontSize=12;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-41">
+          <mxGeometry y="104" width="720" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-50" value="main.js" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;sketch=0;fontSize=12;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="550" y="280" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-51" value="1. creates instance of the object Game{}" style="text;strokeColor=#23445d;fillColor=#bac8d3;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;sketch=0;fontSize=12;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-50">
+          <mxGeometry y="26" width="240" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-57" value="" style="endArrow=classic;html=1;rounded=1;sketch=0;fontSize=12;curved=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="sDLXdUVLIu_r97FrDlhg-50" target="sDLXdUVLIu_r97FrDlhg-41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="810" y="330" as="sourcePoint" />
+            <mxPoint x="790" y="730" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="790" y="530" />
+              <mxPoint x="790" y="630" />
+              <mxPoint x="790" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-60" value="" style="endArrow=classic;html=1;rounded=1;sketch=0;fontSize=12;curved=0;entryX=0.613;entryY=-0.023;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="sDLXdUVLIu_r97FrDlhg-41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="110" as="sourcePoint" />
+            <mxPoint x="520" y="110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-61" value="" style="endArrow=classic;html=1;rounded=1;sketch=0;fontSize=12;curved=0;entryX=0.625;entryY=-0.031;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="sDLXdUVLIu_r97FrDlhg-41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="290" as="sourcePoint" />
+            <mxPoint x="520" y="290" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-62" value="" style="endArrow=classic;html=1;rounded=1;sketch=0;fontSize=12;curved=0;entryX=0.639;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="sDLXdUVLIu_r97FrDlhg-41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="460" as="sourcePoint" />
+            <mxPoint x="510" y="640" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="510" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-63" value="" style="endArrow=classic;html=1;rounded=1;sketch=0;fontSize=12;curved=0;entryX=0.319;entryY=-0.015;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="sDLXdUVLIu_r97FrDlhg-41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="630" as="sourcePoint" />
+            <mxPoint x="310" y="600" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="280" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
