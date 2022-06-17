@@ -6,7 +6,7 @@ How it looks:
 ![onehanded bandit screenshot](https://user-images.githubusercontent.com/87094041/173856729-72224ab3-75a7-4029-80a4-71f4c0214e5a.jpg)
 
 
-Plan of the objects:
+Diagram of the project: (I'm still learning about diagrams and ULM )
 ![proper_diag](https://user-images.githubusercontent.com/87094041/174278467-cb63ca78-7d62-4aa5-8376-067b590eac7f.jpg)
 
 Rules of the game:
