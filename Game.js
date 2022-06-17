@@ -26,11 +26,11 @@ class Game {
         if (result) {
             document.querySelector('.summary p:nth-child(2)').style.color = "rgb(6, 214, 6)";
             document.querySelector('.summary p:nth-child(2)').style.textShadow = "2px 5px 30px rgb(6, 214, 6);";
-            lastGame = `Wygrałeś: ${bid * 3}! Saldo + ${bid*3 - bid}`;
+            lastGame = `You win +${bid * 3}!`;
         } else if (!result && result !== "") {
             document.querySelector('.summary p:nth-child(2)').style.color = "rgb(251, 17, 17)";
             document.querySelector('.summary p:nth-child(2)').style.textShadow = "2px 5px 30px rgb(251, 17, 17);";
-            lastGame = `Przegrałeś: -${bid}`
+            lastGame = `You lose -${bid}`
         }
 
         this.walletSaldo.textContent = money;
@@ -45,11 +45,11 @@ class Game {
 
     startGame() {
 
-        if (this.inputBid.value < 1) return alert('Minimalna wartość aby zagrać nie może być mniejsza niż 1$')
+        if (this.inputBid.value < 1) return alert('Bid value cannot be lower than 1$.');
         //input value stored in var 
         const bid = Math.floor(this.inputBid.value);
 
-        if (!this.wallet.checkCanPlay(bid)) return alert("Masz za mało środków aby zagrać!")
+        if (!this.wallet.checkCanPlay(bid)) return alert("You don't have enough cash in wallet!")
 
         //method from Wallet class, substract cash after user spin
         this.wallet.changeWalletValue(bid, '-');
