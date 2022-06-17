@@ -3,7 +3,7 @@ Project: One-armed bandit game.
 You can try it here: https://noxagen.github.io/one-handed-bandit/
 
 How it looks:
-![onehanded bandit screenshot](https://user-images.githubusercontent.com/87094041/173856729-72224ab3-75a7-4029-80a4-71f4c0214e5a.jpg)
+![machingan](https://user-images.githubusercontent.com/87094041/174311040-ccc96b2e-ffdb-4a4f-9985-5b036f68df95.jpg)
 
 
 Diagram of the project: (I'm still learning about diagrams and ULM )
