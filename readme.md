@@ -28,9 +28,9 @@ Even if you try to put for example 0.66$, program will round up bid value or won
 
 Description:
 
-Welcome in my another project, it's simple casino game aldo known as "One-handed bandit".
+Welcome in my another project, it's simple casino game also known as "One-handed bandit".
 Actualy it is my first project with OOP techniques, so there are many comments in code. 
-I was never worked with classes, constructors and closures, so I was struggling a little, but behind the struggle there is also excitement because I am moving forward with programming :)
+I was never worked with classes, constructors and closures, so I was struggling a little, but beyond the struggle there is also excitement because I am moving forward with programming :)
 
 Technologies i used in project:
 
