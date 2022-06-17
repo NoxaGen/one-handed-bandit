@@ -14,10 +14,11 @@ Rules of the game:
 1. You have starting wallet value 200$. 
 
 2. In the input field you can put whatever amout of credit you want, but remember - minimum value is 1$.
+Even if you try to put for example 0.66$, program will round up bid value or won't allow you to spin.
 
-3. You can't spin for more that your actually wallet value is.
+3. You can't spin for more that your actually wallet value is. Also, the program will not allows you to pass anything except numbers in the input.
 
-4. After spin, from your wallet dissapear value of the bid and machine will start draw-procedure.
+4. After spin, from your wallet dissapear value of the bid and machine will start draw-procedure. Draw-procedure is completly fair. I'ts builded on three completly independent methods.
 
 5. If you draw three same fruits - you win. Also if you draw three diffrent fruits in each screen - you win. When you win, the bid value is multiplied by three and feeds your wallet by it.
 
