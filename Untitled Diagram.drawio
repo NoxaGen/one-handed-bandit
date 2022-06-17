@@ -1,20 +1,23 @@
-<mxfile host="app.diagrams.net" modified="2022-06-17T08:06:10.073Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="z8x5VzTnBdnizKItBSjr" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-17T08:14:20.654Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="XgdFA0-NgKCY8-HxgSG2" version="20.0.1" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="sDLXdUVLIu_r97FrDlhg-0" value="class Wallet" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="50" y="50" width="400" height="120" as="geometry" />
+          <mxGeometry x="50" y="50" width="400" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="sDLXdUVLIu_r97FrDlhg-1" value="_money - private variable wich is stors credits." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-0">
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-1" value="1. _money - private variable wich is stors credits." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-0">
           <mxGeometry y="30" width="400" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="sDLXdUVLIu_r97FrDlhg-2" value="this. getWalletValueMethod wich allow us to check wallet value." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-0">
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-2" value="2. this.getWalletValueMethod wich allow us to check wallet value." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-0">
           <mxGeometry y="60" width="400" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="sDLXdUVLIu_r97FrDlhg-3" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-0">
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-3" value="3. this.checkCanPlay - method checks user have enough credits." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-0">
           <mxGeometry y="90" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sDLXdUVLIu_r97FrDlhg-8" value="4. this.changeWalletValue - method that allow us to modify wallet value." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="sDLXdUVLIu_r97FrDlhg-0">
+          <mxGeometry y="120" width="400" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
